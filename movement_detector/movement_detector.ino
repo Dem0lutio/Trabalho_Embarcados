@@ -8,7 +8,7 @@ void setup() {
   WiFi.mode(WIFI_OFF);       
   delay(1000);
   WiFi.mode(WIFI_STA);        
-  WiFi.begin("luis phone", "luis123");     
+  WiFi.begin("luis_phone", "luis123");     
   
   // Aguarda a conexão Wi-Fi
   while (WiFi.status() != WL_CONNECTED) {
