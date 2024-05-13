@@ -1,21 +1,20 @@
-
 int pirPin = D2; // Define o pino conectado ao sensor PIR.
 int val; // Armazena o estado lido pelo sensor.
 
 void setup() {
   Serial.begin(9600); 
 
+  // Configuração da conexão Wi-Fi
   WiFi.mode(WIFI_OFF);       
   delay(1000);
-
   WiFi.mode(WIFI_STA);        
   WiFi.begin("luis phone", "luis123");     
-
+  
+  // Aguarda a conexão Wi-Fi
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(". ");
   }
-
 
   Serial.println("WiFi conectado.");
   Serial.println("Endereço IP: ");
@@ -33,4 +32,3 @@ void loop() {
 
   delay(100); // Aguarda 100 milissegundos antes de repetir.
 }
-
